@@ -62,13 +62,40 @@ class Calculator implements ActionListener {
             functionButtons[i].setFont(myFont);
             functionButtons[i].setFocusable(false);
         }
+
+
         for(int i=0; i<10;i++){
-            
+            numberButtons[i] = new JButton(String.valueOf(i));
         }
+        delButton.setBounds(50,430,145,50);
+        clrButton.setBounds(205,430,145,50);
+
+        panel = new JPanel();
+        panel.setBounds(50,100,300,300);
+        panel.setLayout(new GridLayout(4,4,10,10));
+        // panel.setBackground(Color.GRAY);
+
+        panel.add(numberButtons[1]);
+        panel.add(numberButtons[2]);
+        panel.add(numberButtons[3]);
+        panel.add(addButton);
+        panel.add(numberButtons[4]);
+        panel.add(numberButtons[5]);
+        panel.add(numberButtons[6]);
+        panel.add(subButton);
+        panel.add(numberButtons[7]);
+        panel.add(numberButtons[8]);
+        panel.add(numberButtons[9]);
+        panel.add(mulButton);
+        panel.add(decButton);
+        panel.add(numberButtons[0]);
+        panel.add(equButton);
+        panel.add(divButton);
 
 
-
-
+        frame.add(panel);
+        frame.add(delButton);
+        frame.add(clrButton);
         frame.add(textfield);
         frame.setVisible(true);
     }
